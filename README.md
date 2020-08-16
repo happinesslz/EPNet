@@ -1,8 +1,6 @@
 # EPNet
-EPNet: Enhancing Point Features with Image Semantics for 3D Object Detection(ECCV 2020)
-Paper is now available in [EPNet](https://arxiv.org/pdf/2007.08856.pdf)
-
-The code is based on [PointRCNN](https://github.com/sshaoshuai/PointRCNN).
+EPNet: Enhancing Point Features with Image Semantics for 3D Object Detection (ECCV 2020).
+Paper is now available in [EPNet](https://arxiv.org/pdf/2007.08856.pdf), and the code is based on [PointRCNN](https://github.com/sshaoshuai/PointRCNN).
 
 ## Highlights
 0. Without extra image annotations, e.g. 2D bounding box, Semantic labels and so on. 
