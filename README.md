@@ -48,7 +48,7 @@ sh build_and_install.sh
 ## Dataset preparation
 Please download the official [KITTI 3D object detection](http://www.cvlibs.net/datasets/kitti/eval_object.php?obj_benchmark=3d) dataset and organize the downloaded files as follows: 
 ```
-PointRCNN
+EPNet
 ├── data
 │   ├── KITTI
 │   │   ├── ImageSets
@@ -66,12 +66,19 @@ PointRCNN
 ## Trained model
 The results of Car on Recall 40:
 
-|  LI Fusion | CE loss|   Easy |   Moderate |   Hard   |   mAP   |
-|  ----      | ----   |  ----  |   ----     |   ----   |  ----   |
-|    No      |  No     |  88.76 |  78.03     |   76.20  |  80.99  |
-|    Yes      |  No     |  89.93 |  80.77     |   77.25  |  82.65  |
-|    No      |  Yes    |  92.12 |  81.48     |   79.34  |  84.31  |
-|    Yes      | Yes     |  92.17 |  82.68     |   80.10  |  84.99  |
+|LI Fusion| CE loss|   Easy | Moderate |   Hard |  mAP  |models|
+|  ----  | ----   |  ----  |   ----  |   ----  |  ---- |---- |
+|    No  |  No    |  88.76 |  78.03  |   76.20 |  80.99| [Google](https://drive.google.com/drive/folders/1MT-gArGnu-4qrThjHtEKjWZ_8999nwWx?usp=sharing), [Baidu](https://pan.baidu.com/s/1ZBr9oFzOi2OZCutjYkpM6Q) (a43t)|
+|    Yes |  No    |  89.93 |  80.77  |   77.25 |  82.65| [Google](https://drive.google.com/drive/folders/1mvmZY-XXmt059IODlJgKXtuFH0Wmp3MT?usp=sharing), [Baidu](https://pan.baidu.com/s/1MgTynfR2MfVspV8HMyzgGw) (dbxy)|
+|    No  |  Yes   |  92.12 |  81.48  |   79.34 |  84.31| [Google](https://drive.google.com/drive/folders/1Up2siHcBOIIGrHKok7nVu9YoBPQS9rcR?usp=sharing), [Baidu](https://pan.baidu.com/s/19-CVgQT_lQ6iyb-PVZ0sDQ) (hrkv)|
+|    Yes | Yes    |  92.17 |  82.68  |   80.10 |  84.99| [Google](https://drive.google.com/drive/folders/1tON7-ooxcEMeB7wEfH914SRPlai7npU9?usp=sharing), [Baidu](https://pan.baidu.com/s/1rMnodG0a5uuJtCSX-bzr1Q) (nasm)|
+
+For evaluating these models, please download the above  models. Unzip these models  and place them to "./log/Car/models"
+```shell
+cd ./tools
+mkdir -p log/Car/models
+bash run_eval_model.sh
+```
 
 ## Implementation
 ### Training
