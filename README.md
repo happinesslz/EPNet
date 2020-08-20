@@ -73,13 +73,14 @@ The results of Car on Recall 40:
 |    No  |  Yes   |  92.12 |  81.48  |   79.34 |  84.31| [Google](https://drive.google.com/drive/folders/1Up2siHcBOIIGrHKok7nVu9YoBPQS9rcR?usp=sharing), [Baidu](https://pan.baidu.com/s/19-CVgQT_lQ6iyb-PVZ0sDQ) (hrkv)|
 |    Yes | Yes    |  92.17 |  82.68  |   80.10 |  84.99| [Google](https://drive.google.com/drive/folders/1tON7-ooxcEMeB7wEfH914SRPlai7npU9?usp=sharing), [Baidu](https://pan.baidu.com/s/1rMnodG0a5uuJtCSX-bzr1Q) (nasm)|
 
-For evaluating these models, please download the above  models. Unzip these models  and place them to "./log/Car/models"
+Besides, adding iou branch to EPNet (the last line in  the above table) can bring a minor improvement and the results are more stable. The result is 92.50(Easy), 82.45(Moderate), 80.29(Hard), 85.08(mAP), and the model checkpoint can be obtained from [Google](https://drive.google.com/drive/folders/13Vs2E8oDD53mrI6Q6GcknpfbzbRxcgbD?usp=sharing), [Baidu](https://pan.baidu.com/s/1y-TuenVzpltsCGNcBxMO0w) (8sir).
+
+To evaluate all these models, please download the above  models. Unzip these models  and place them to "./log/Car/models"
 ```shell
 cd ./tools
 mkdir -p log/Car/models
 bash run_eval_model.sh
 ```
-
 ## Implementation
 ### Training
 Run EPNet for single gpu:
