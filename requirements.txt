@@ -14,3 +14,4 @@ tqdm
 ninja
 fire
 numba
+easydict
